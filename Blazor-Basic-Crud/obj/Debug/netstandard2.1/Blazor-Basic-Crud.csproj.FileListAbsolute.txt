@@ -355,6 +355,6 @@ C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\ne
 C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\Blazor-Basic-Crud.csproj.CopyComplete
 C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\Blazor-Basic-Crud.dll
 C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\Blazor-Basic-Crud.pdb
-C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\integrity\f9DgTcOhOhS2hlhjYexT_e5NP4tVLx34HcHx9Ktqa8M=.hash
-C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\integrity\F4rUzcwYHFjfk_ExmnTYFO0mX-zRZvJpQWCk66uWfgM=.hash
-C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\integrity\03mV5WSHKfMf7O11u0Gd6SIVq79ZSemigkZu0-KSEKE=.hash
+C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\integrity\Or_ayptnsFlhsVcFh2QP1bFVuHNTDWpxIQr85VoukDg=.hash
+C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\integrity\AKvHXNsy_0z2Gpc9g2DwMT_btTx7yFwxLX48mn5jygo=.hash
+C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\obj\Debug\netstandard2.1\integrity\hBNa5K5Ol8NdDFBnRcha3KO16tAbcMo_MvoVzQahR3Q=.hash

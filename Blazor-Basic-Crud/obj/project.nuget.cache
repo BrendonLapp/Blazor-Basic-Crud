@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0hck7D73zY+a84fZhL09ZEImB3rEEy6CmMxEqfNV+1Jathbo+RmKwASgEVC24MAosL15o+0aN/Z3z3i4CqAFww==",
+  "dgSpecHash": "zVF+A7T3h0XNeTETMZfoFba5lJNdb83HsDS15hgdMMNpuoifqi1L/oN5BL2rvWQLAgWO1eswKXzLCVJNOoqrRA==",
   "success": true,
   "projectFilePath": "C:\\Users\\b_lap\\Documents\\GitHub\\Blazor-Basic-Crud\\Blazor-Basic-Crud\\Blazor-Basic-Crud.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\b_lap\\.nuget\\packages\\bootstrap\\5.1.0\\bootstrap.5.1.0.nupkg.sha512",
     "C:\\Users\\b_lap\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.6\\microsoft.aspnetcore.authorization.3.1.6.nupkg.sha512",
     "C:\\Users\\b_lap\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.6\\microsoft.aspnetcore.components.3.1.6.nupkg.sha512",
     "C:\\Users\\b_lap\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.6\\microsoft.aspnetcore.components.analyzers.3.1.6.nupkg.sha512",
