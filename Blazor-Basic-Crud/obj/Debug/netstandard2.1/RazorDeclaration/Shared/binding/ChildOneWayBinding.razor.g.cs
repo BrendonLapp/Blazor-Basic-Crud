@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_Basic_Crud.Shared
+namespace Blazor_Basic_Crud.Shared.Binding
 {
     #line hidden
     using System;
@@ -75,7 +75,21 @@ using Blazor_Basic_Crud.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 10 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Form;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Binding;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class ChildOneWayBinding : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -83,11 +97,10 @@ using Blazor_Basic_Crud.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Shared\SurveyPrompt.razor"
+#line 4 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Shared\Binding\ChildOneWayBinding.razor"
        
-    // Demonstrates how a parent component can supply parameters
-    [Parameter]
-    public string Title { get; set; }
+	[Parameter]
+	public string MainTitle { get; set; }
 
 #line default
 #line hidden

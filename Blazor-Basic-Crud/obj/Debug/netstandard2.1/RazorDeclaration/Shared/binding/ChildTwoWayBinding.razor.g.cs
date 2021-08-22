@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_Basic_Crud.Shared
+namespace Blazor_Basic_Crud.Shared.Binding
 {
     #line hidden
     using System;
@@ -75,7 +75,21 @@ using Blazor_Basic_Crud.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 10 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Form;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Binding;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class ChildTwoWayBinding : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -83,16 +97,13 @@ using Blazor_Basic_Crud.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
+#line 7 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Shared\Binding\ChildTwoWayBinding.razor"
+        [Parameter]
+    public string MainTitle { get; set; }
+    [Parameter]
+    public EventCallback<string> MainTitleChanged { get; set; }
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+    private async Task ModifyMainTitle() { await MainTitleChanged.InvokeAsync(MainTitle); } 
 
 #line default
 #line hidden

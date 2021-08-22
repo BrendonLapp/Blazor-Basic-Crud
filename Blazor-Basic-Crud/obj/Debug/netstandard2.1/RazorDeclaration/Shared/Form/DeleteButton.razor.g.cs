@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_Basic_Crud.Shared
+namespace Blazor_Basic_Crud.Shared.Form
 {
     #line hidden
     using System;
@@ -75,7 +75,21 @@ using Blazor_Basic_Crud.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class Card : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 10 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Form;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Binding;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class DeleteButton : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

@@ -75,6 +75,20 @@ using Blazor_Basic_Crud.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Form;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\_Imports.razor"
+using Blazor_Basic_Crud.Shared.Binding;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -88,12 +102,9 @@ using Blazor_Basic_Crud.Shared;
        
     private int currentCount = 0;
 
-    [Parameter]
-    public int IncrementAmount { get; set; } = 1;
-
     private void IncrementCount()
     {
-        currentCount += IncrementAmount;
+        currentCount++;
     }
 
 #line default

@@ -1,0 +1,34 @@
+﻿<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">@Name</label>
+    </div>
+    <select class="custom-select" id="inputGroupSelect01">
+        <option selected>Choose...</option>
+        @foreach (string option in Options)
+        {
+            <option @oninput="OnSelect" value=@option>@option</option>
+        }
+    </select>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Name { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<string> Options { get; set; }
+
+    [Parameter]
+    public string SelectedOption { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OptionChosen { get; set; }
+
+    private Task OnSelect(ChangeEventArgs e)
+    {
+        SelectedOption = e.Value.ToString();
+
+        return OptionChosen.InvokeAsync(SelectedOption);
+    }
+}
