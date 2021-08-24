@@ -99,25 +99,33 @@ using Blazor_Basic_Crud.Shared.Binding;
 #nullable restore
 #line 14 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Shared\Form\Dropdown.razor"
        
-
     [Parameter]
     public string Name { get; set; }
 
     [Parameter]
     public IReadOnlyList<string> Options { get; set; }
 
-    [Parameter]
-    public string SelectedOption { get; set; }
+    public string SelectValue { get; set; }
 
     [Parameter]
-    public EventCallback<string> OptionChosen { get; set; }
-
-    private Task OnSelect(ChangeEventArgs e)
+    public string ListItem
     {
-        SelectedOption = e.Value.ToString();
-
-        return OptionChosen.InvokeAsync(SelectedOption);
+        get { return SelectValue; }
+        set
+        {
+            if (SelectValue != value)
+            {
+                SelectValue = value;
+                if (ListItemChanged.HasDelegate)
+                {
+                    ListItemChanged.InvokeAsync(value);
+                }
+            }
+        }
     }
+
+    [Parameter]
+    public EventCallback<string> ListItemChanged { get; set; }
 
 #line default
 #line hidden

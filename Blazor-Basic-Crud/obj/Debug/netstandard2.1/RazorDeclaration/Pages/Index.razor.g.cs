@@ -97,6 +97,47 @@ using Blazor_Basic_Crud.Shared.Binding;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 37 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Pages\Index.razor"
+        public string CustomerID { get; set; } = string.Empty;
+    public string CompanyName { get; set; } = string.Empty;
+    public string ContactName { get; set; } = string.Empty;
+    public string ContactTitle { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
+    public string City { get; set; } = string.Empty;
+    public string Region { get; set; } = string.Empty;
+    public string PostalCode { get; set; } = string.Empty;
+    public string Country { get; set; } = string.Empty;
+    public string Phone { get; set; } = string.Empty;
+    public string Fax { get; set; } = string.Empty;
+
+    List<string> Countries = new List<string> { "Canada", "United Kingdom" };
+    List<string> Provinces = new List<string> {
+        "Alberta",
+        "British Columbia",
+        "Manitoba",
+        "New Brunswick",
+        "Newfoundland and Labrador",
+        "Northwest Territories",
+        "Nova Scotia",
+        "Nunavut",
+        "Ontario",
+        "Prince Edward Island",
+        "Quebec",
+        "Saskatchewan",
+        "Yukon"
+        };
+    List<string> UKJurisdictions = new List<string>
+{
+        "England",
+        "Scotland",
+        "Northern Ireland",
+        "Wales"
+    }; 
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

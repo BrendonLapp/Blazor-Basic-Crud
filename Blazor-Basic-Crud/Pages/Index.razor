@@ -1,1 +1,60 @@
 ﻿@page "/"
+
+<InputBox Name="Customer ID" @bind-InputValue="CustomerID" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="Company Name" @bind-InputValue="CompanyName" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="Contact Name" @bind-InputValue="ContactName" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="Contact Title" @bind-InputValue="ContactTitle" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="Address" @bind-InputValue="Address" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="City" @bind-InputValue="City" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="Postal Code" @bind-InputValue="PostalCode" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="Phone" @bind-InputValue="Phone" @bind-InputValue:event="InputValueChanged" />
+<InputBox Name="Fax" @bind-InputValue="Fax" @bind-InputValue:event="InputValueChanged" />
+<Dropdown Name="Country" Options="Countries" @bind-ListItem="Country" />
+
+@if (Country == "Canada")
+{
+<Dropdown Name="Province" Options="Provinces" @bind-ListItem="Region" />}
+
+@if (Country == "United Kingdom")
+{
+<Dropdown Name="UK Jurisdiction" Options="UKJurisdictions" @bind-ListItem="Region" />
+}
+
+
+
+
+@code { public string CustomerID { get; set; } = string.Empty;
+    public string CompanyName { get; set; } = string.Empty;
+    public string ContactName { get; set; } = string.Empty;
+    public string ContactTitle { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
+    public string City { get; set; } = string.Empty;
+    public string Region { get; set; } = string.Empty;
+    public string PostalCode { get; set; } = string.Empty;
+    public string Country { get; set; } = string.Empty;
+    public string Phone { get; set; } = string.Empty;
+    public string Fax { get; set; } = string.Empty;
+
+    List<string> Countries = new List<string> { "Canada", "United Kingdom" };
+    List<string> Provinces = new List<string> {
+        "Alberta",
+        "British Columbia",
+        "Manitoba",
+        "New Brunswick",
+        "Newfoundland and Labrador",
+        "Northwest Territories",
+        "Nova Scotia",
+        "Nunavut",
+        "Ontario",
+        "Prince Edward Island",
+        "Quebec",
+        "Saskatchewan",
+        "Yukon"
+        };
+    List<string> UKJurisdictions = new List<string>
+{
+        "England",
+        "Scotland",
+        "Northern Ireland",
+        "Wales"
+    }; }

@@ -1,49 +1,19 @@
-﻿<!--<div class="input-group mb-3">
+﻿<div class="input-group mb-3">
     <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">@Name</span>
+        <span class="input-group-text input-width" id="inputGroup-sizing-default">@Name</span>
     </div>
-    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" @bind="ParentsTitle" @oninput="UpdateParentsTitle">
-</div>
-
-<h2>Parent Title is: @ParentsTitle</h2>-->
-@*<button @onclick="UpdateParentsTitle">Update Parents Title</button>*@
-
-
-<!--code {
-
-    [Parameter] public string Name { get; set; }
-
-    [Parameter] public string ParentsTitle { get; set; }
-    [Parameter] public EventCallback<string> ParentsTitleChanged { get; set; }
-
-    private async Task UpdateParentsTitle()
-    {
-        ParentsTitle = ParentsTitle;
-        await ParentsTitleChanged.InvokeAsync(ParentsTitle);
-    }
-}-->
-
-<div>
-    <InputText type="text" @bind-Value="@BindingValue" />
+    <input type="text" class="form-control" @bind="InputValue" @bind:event="oninput" @onkeyup="ModifyInputValue">
 </div>
 
 @code {
-
-    private string _value;
+    [Parameter]
+    public string Name { get; set; }
 
     [Parameter]
-    public string BindingValue
-    {
-        get => _value;
-        set
-        {
-            if (_value == value) return;
-            _value = value;
-            BindingValueChanged.InvokeAsync(value);
-        }
-    }
+    public string InputValue { get; set; }
 
     [Parameter]
-    public EventCallback<string> BindingValueChanged { get; set; }
+    public EventCallback<string> InputValueChanged { get; set; }
 
+    private async Task ModifyInputValue() { await InputValueChanged.InvokeAsync(InputValue); }
 }

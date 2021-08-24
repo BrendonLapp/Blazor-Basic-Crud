@@ -97,26 +97,18 @@ using Blazor_Basic_Crud.Shared.Binding;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Shared\Form\InputBox.razor"
+#line 8 "C:\Users\b_lap\Documents\GitHub\Blazor-Basic-Crud\Blazor-Basic-Crud\Shared\Form\InputBox.razor"
        
-
-    private string _value;
+    [Parameter]
+    public string Name { get; set; }
 
     [Parameter]
-    public string BindingValue
-    {
-        get => _value;
-        set
-        {
-            if (_value == value) return;
-            _value = value;
-            BindingValueChanged.InvokeAsync(value);
-        }
-    }
+    public string InputValue { get; set; }
 
     [Parameter]
-    public EventCallback<string> BindingValueChanged { get; set; }
+    public EventCallback<string> InputValueChanged { get; set; }
 
+    private async Task ModifyInputValue() { await InputValueChanged.InvokeAsync(InputValue); }
 
 #line default
 #line hidden

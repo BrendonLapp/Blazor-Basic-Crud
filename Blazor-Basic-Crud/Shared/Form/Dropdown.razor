@@ -1,34 +1,42 @@
 ﻿<div class="input-group mb-3">
     <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">@Name</label>
+        <label class="input-group-text input-width" for="inputGroupSelect">@Name</label>
     </div>
-    <select class="custom-select" id="inputGroupSelect01">
+    <select class="custom-select" @bind="ListItem">
         <option selected>Choose...</option>
         @foreach (string option in Options)
         {
-            <option @oninput="OnSelect" value=@option>@option</option>
+            <option value=@option>@option</option>
         }
     </select>
 </div>
 
 @code {
-
     [Parameter]
     public string Name { get; set; }
 
     [Parameter]
     public IReadOnlyList<string> Options { get; set; }
 
-    [Parameter]
-    public string SelectedOption { get; set; }
+    public string SelectValue { get; set; }
 
     [Parameter]
-    public EventCallback<string> OptionChosen { get; set; }
-
-    private Task OnSelect(ChangeEventArgs e)
+    public string ListItem
     {
-        SelectedOption = e.Value.ToString();
-
-        return OptionChosen.InvokeAsync(SelectedOption);
+        get { return SelectValue; }
+        set
+        {
+            if (SelectValue != value)
+            {
+                SelectValue = value;
+                if (ListItemChanged.HasDelegate)
+                {
+                    ListItemChanged.InvokeAsync(value);
+                }
+            }
+        }
     }
+
+    [Parameter]
+    public EventCallback<string> ListItemChanged { get; set; }
 }
